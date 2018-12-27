@@ -41,21 +41,23 @@
             <component
               v-bind:is="currentTabComponent"
               class="tab"
-            ></component>
+            >
+            <div class="content">
+              <blog-post
+              v-for="post in posts"
+              v-bind:key="post.id"
+              v-bind:post="post"
+              ></blog-post>
+            </div>
+          </div>
+    
+          </component>
           </div>
     </div>
   </section>
   <section class="section">
     <div class="container">
       <div id="blog-post-demo">
-        <div class="content">
-          <blog-post
-          v-for="post in posts"
-          v-bind:key="post.id"
-          v-bind:post="post"
-          ></blog-post>
-        </div>
-      </div>
 
     </div>
   </section>
